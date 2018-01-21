@@ -1,1 +1,1 @@
-{"client":"mysql","connection":{"host":"127.0.0.1","user":"root","password":"password","database":"arcturus","pools":{"min":5,"max":120}}}
+{"client":"mysql","connection":{"host":"127.0.0.1","user":"root","password":"password","database":"roleplay","pools":{"min":5,"max":120}}}

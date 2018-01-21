@@ -59,13 +59,13 @@
                     <h2 class="profile__card__title">Rooms</h2>
                     <habbo-room-list class="item-list--grid" ng-if="user.rooms !== undefined && user.rooms.length > 0">
                       <ul>
-                        <li class="item item--room" ng-repeat="room in user.rooms">
+                        <li class="item item--room" ng-repeat="room in user.rooms | limitTo:4">
                             <a href="/room/{{ room.id }}" class="item__content">
                                 <habbo-room-icon class="item__icon" url="https://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/64061002.png">
                                     <div class="room-icon"></div>
                                 </habbo-room-icon>
                                 <div class="item__text">
-                                    <h6 class="item__title item__title--single-line">{{ room.name }}</h6>
+                                    <h6 class="item__title item__title--single-line">{{ room.caption }}</h6>
                                 </div>
                             </a>
                         </li>

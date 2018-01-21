@@ -10,8 +10,8 @@ export default class CRUD {
         password          : Hash.hashSync(data.password),
         mail              : data.mail,
         account_created   : Moment(Date.now()).unix(),
-        ip_register       : data.ip,
-        ip_current        : data.ip
+        ip_reg            : data.ip,
+        ip_last           : data.ip
       }
       new User(user).save()
         .then (user => {

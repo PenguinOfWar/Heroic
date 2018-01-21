@@ -6,7 +6,6 @@ import News from './data/website/news'
 import Register from './auth/register'
 import Users from './data/emulator/users'
 import Staff from './data/emulator/staff'
-import Photos from './data/emulator/photos'
 import Online from './data/emulator/online'
 import Website from './data/website/settings'
 import Hangouts from './data/website/hangouts'
@@ -37,15 +36,13 @@ export default class Routes {
     http.get('/api/data/website/category/fetch/:id', Category.get)
     http.get('/api/data/emulator/users/fetch/:username', Users.get)
     http.get('/api/data/emulator/users/leaderboards', Users.leaderboard)
-    http.get('/api/data/emulator/photos/fetch', Photos.get)
-    http.post('/api/data/emulator/photos/like', JWT.check, Photos.like)
     http.get('/api/data/emulator/online/fetch', Online.get)
     http.get('/api/data/emulator/staff/fetch', Staff.get)
     http.get('/api/data/website/hangouts/post/delete/:id', JWT.check, Hangouts.delete)
     http.get('/api/data/website/hangouts/comments/delete/:id', JWT.check, Hangouts.delete_comment)
     http.post('/api/data/website/hangouts/comments/create', JWT.check, Hangouts.create_comment)
     http.get('/api/data/website/hangouts/fetch', Hangouts.list)
-    http.get('/api/data/website/hangouts/fetch/:id', Hangouts.view) 
+    http.get('/api/data/website/hangouts/fetch/:id', Hangouts.view)
     http.post('/api/data/website/hangouts/create', JWT.check, Hangouts.create)
 
     // Return

@@ -7,7 +7,6 @@
                   <ul class="news-category__list">
                       <a ng-click="setTab(1)" class="news-category__link" ng-class="{ 'news-category__link--active': isSet(1) }">Credits</a>
                       <a ng-click="setTab(2)" class="news-category__link" ng-class="{ 'news-category__link--active': isSet(2) }">Duckets</a>
-                      <a ng-click="setTab(3)" class="news-category__link" ng-class="{ 'news-category__link--active': isSet(3) }">Diamonds</a>
                   </ul>
               </nav>
           </header>
@@ -51,29 +50,7 @@
                       <p class="news-header__date">{{ user.pixels }} Pixels</p>
                   </aside>
               </article>
-            </div> 
-          </div>
-
-          <div ng-if="isSet(3)">
-            <div ng-repeat="user in leaderboards.diamonds" style="display:inline-block;">
-              <article class="news-header news-header--column" style="height: 0px;margin-bottom: 0px;min-height: 0px;"></article>
-              <article class="news-header news-header--column" style="height: 0px;margin-bottom: 0px;min-height: 0px;"></article>
-              <article class="news-header news-header--column">
-                  <a href="/profile/{{ user.username }}" class="news-header__link news-header__banner">
-                      <figure class="news-header__viewport" style="border-radius:50%">
-                          <img src="assets/img/staff.png" class="news-header__image news-header__image--thumbnail" style="opacity:.5;">
-                          <div class="staff_avatar" style="background: url({{ website.figure_imager }}?figure={{ user.look }}&amp;direction=2&amp;head_direction=3&amp;gesture=sml&amp;size=l);height: 124px;width: 110px;top: 0px;z-index: 9000;position: absolute;background-position: -8px -17px;"></div>
-                      </figure>
-                  </a>
-                  <a href="/profile/{{ user.username }}" class="news-header__link news-header__wrapper">
-                      <h2 class="news-header__title">{{ user.username }}</h2>
-                  </a>
-                  <aside class="news-header__wrapper news-header__info">
-                      <p class="news-header__date">{{ user.points }} Diamonds</p>
-                  </aside>
-              </article>
             </div>
           </div>
-
       </section>
   </habbo-compile>

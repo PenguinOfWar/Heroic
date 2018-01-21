@@ -3,7 +3,7 @@ import Database from  '../../server'
 export default class Ranks extends Database.Model {
 
     get tableName () {
-        return 'permissions'
+        return 'ranks'
     }
 
     members () {

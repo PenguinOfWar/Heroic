@@ -1,7 +1,12 @@
 <habbo-navigation active="home">
     <nav class="navigation">
         <ul class="navigation__menu">
-          <li ng-repeat="item in navigationList | orderBy: 'sort'" class="navigation__item">
+          <li ng-if="!item.restricted && !$root.state.includes('admin')" ng-repeat="item in navigationList | orderBy: 'sort'" class="navigation__item">
+            <a ng-click="(item.url == null) ? $root.state.go(item.state.name) : $root.state.go(item.url)"  class="navigation__link" ng-class="{'navigation__link--active': $root.state.includes(item.state.name)}" style="color:#036;">
+              <i class="fa fa-{{ item.icon }}"></i> {{ (item.name == 'current_username') ? $root.session.username : item.name }}
+            </a>
+          </li>
+          <li ng-if="item.restricted && $root.state.includes('admin') && $root.session.rank.staff==1" ng-repeat="item in navigationList | orderBy: 'sort'" class="navigation__item">
             <a ng-click="(item.url == null) ? $root.state.go(item.state.name) : $root.state.go(item.url)"  class="navigation__link" ng-class="{'navigation__link--active': $root.state.includes(item.state.name)}" style="color:#036;">
               <i class="fa fa-{{ item.icon }}"></i> {{ (item.name == 'current_username') ? $root.session.username : item.name }}
             </a>

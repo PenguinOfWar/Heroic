@@ -91,22 +91,12 @@
 		"template": "<div ui-view></div>"
 	},
 
-	"community.photos": {
-		"pretty": "Photos",
-		"name": "community.photos",
-		"url": "/photos",
-		"controller": "Photos",
-		"templateUrl": "views/session/user/community/photos.html",
-		"session": true
-
-	},
-
 	"community.online": {
 		"pretty": "Online Users",
 		"name": "community.online",
 		"url": "/online",
 		"controller": "Online",
-		"templateUrl": "views/session/user/community/online.html",
+		"templateUrl": "views/session/user/community/online.html",  
 		"session": true
 	},
 
@@ -209,6 +199,43 @@
 		"controller": "HangoutsCreate",
 		"templateUrl": "views/session/user/hangouts/create.html",
 		"session": true
+	},
+
+
+	"admin": {
+		"abstract": true,
+		"name": "admin",
+		"url": "/admin",
+		"template": "<div ui-view></div>",
+		"restricted": true
+	},
+
+	"admin.home": {
+		"pretty": "Admin",
+		"name": "admin.home",
+		"url": "/home",
+		"templateUrl": "views/session/admin/home.html",
+		"session": true,
+		"restricted": true
+	},
+
+	"admin.website": {
+		"abstract": true,
+		"name": "admin.website",
+		"url": "/website",
+		"template": "<div ui-view></div>",
+		"restricted": true
+	},
+
+	"admin.website.settings": {
+		"pretty": "Website Settings",
+		"name": "admin.website.settings",
+		"url": "/settings",
+		"controllers": "AdminWebsiteSettings",
+		"templateUrl": "views/session/admin/website/settings.html",
+		"session": true,
+		"restricted": true
 	}
+
 
 }

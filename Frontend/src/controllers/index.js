@@ -5,7 +5,6 @@ import Register from './session/guest/register'
 import Client from './session/user/home/client'
 import Profile from './session/user/home/profile'
 import Staff from './session/user/community/staff'
-import Photos from './session/user/community/photos'
 import Online from './session/user/community/online'
 import Article from './session/user/community/Article'
 import HangoutsHome from './session/user/hangouts/home'
@@ -24,8 +23,7 @@ app.controller('Client', Client)
 app.controller('About', About)
 app.controller('Profile', Profile)
 // User Community
-app.controller('Staff', Staff)
-app.controller('Photos', Photos)
+app.controller('Staff', Staff) 
 app.controller('Online', Online)
 app.controller('Article', Article)
 app.controller('Categories', Categories)

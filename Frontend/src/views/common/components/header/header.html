@@ -28,7 +28,7 @@
                     </li>
 
                     <li class="user-menu__item">
-                        <a sref="me.settings" class="user-menu__link user-menu__link--settings">Settings</a>
+                      <a ng-if="$root.session.rank.staff==1" ui-sref="admin.home" class="user-menu__link user-menu__link--settings">Admin Panel</a>
                     </li>
 
                     <li class="user-menu__item">

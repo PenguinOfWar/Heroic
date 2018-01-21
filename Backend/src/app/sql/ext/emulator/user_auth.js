@@ -43,7 +43,7 @@ export default class Auth {
   }
 
   static hasAccounts (data, callback) {
-    Users.where('ip_current', data.ip).fetch({ columns : ['id'] })
+    Users.where('ip_last', data.ip).fetch({ columns : ['id'] })
       .then (users => {
         if (users && users.length > 3) {
           callback({ errors : 'You already registered the maximum number of accounts!' })

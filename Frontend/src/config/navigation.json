@@ -25,22 +25,10 @@
 			"name": "Community",
 			"icon": "users",
 			"state": "community",
-			"url": "community.photos",
+			"url": "community.news.category.all",
 			"sort": 2,
 			"disabled": false,
 			"subItems": [
-				{
-					"name": "Home",
-					"state": "community.home",
-					"sort": 1,
-					"disabled": false
-				},
-				{
-					"name": "Photos",
-					"state": "community.photos",
-					"sort": 2,
-					"disabled": false
-				},
 				{
 					"name": "Online",
 					"state": "community.online",
@@ -58,7 +46,7 @@
 					"name": "Leaderboards",
 					"state": "community.leaderboards",
 					"sort": 5,
-					"disabled": false
+					"disabled": false 
 				},
 				{
 					"name": "Staff",
@@ -87,6 +75,38 @@
 					"name": "Share A Story",
 					"state": "hangouts.create",
 					"sort": 2,
+					"disabled": false
+				}
+			]
+		},
+		{
+			"name": "Home",
+			"icon": "home",
+			"state": "admin.home",
+			"sort": 1,
+			"disabled": false,
+			"restricted": true,
+			"subItems": [
+				{
+					"name": "Home",
+					"state": "admin.home",
+					"sort": 1,
+					"disabled": false
+				}
+			]
+		},
+		{
+			"name": "Website",
+			"icon": "gear",
+			"state": "admin.website.settings",
+			"sort": 1,
+			"disabled": false,
+			"restricted": true,
+			"subItems": [
+				{
+					"name": "Settings",
+					"state": "admin.website.settings",
+					"sort": 1,
 					"disabled": false
 				}
 			]

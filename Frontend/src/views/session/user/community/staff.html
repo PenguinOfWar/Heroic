@@ -6,7 +6,7 @@
         <nav class="news-category__navigation">
             <ul class="news-category__list">
               <li class="news-category__item" ng-repeat="rank in ranks">
-                <a ng-click="setTab(rank.id)" class="news-category__link" ng-class="{ 'news-category__link--active': isSet(rank.id) }">{{ rank.rank_name }}</a>
+                <a ng-click="setTab(rank.id)" class="news-category__link" ng-class="{ 'news-category__link--active': isSet(rank.id) }">{{ rank.name }}</a>
               </li>
             </ul>
         </nav>
